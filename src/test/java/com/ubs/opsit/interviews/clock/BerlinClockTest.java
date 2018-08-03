@@ -15,7 +15,7 @@ import com.ubs.opsit.interviews.clock.rows.MinutesRow;
 import com.ubs.opsit.interviews.clock.rows.SecondsRow;
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({ BerlinClockTest.class, SecondsRow.class })
+@PrepareForTest({ BerlinClockTest.class, SecondsRow.class, HoursRow.class, MinutesRow.class })
 public class BerlinClockTest {
 
 	@Test

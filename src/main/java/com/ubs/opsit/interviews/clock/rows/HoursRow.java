@@ -8,7 +8,12 @@ import static org.apache.commons.lang.StringUtils.EMPTY;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class HoursRow extends ClockRow {
+	private static final Logger LOG = LoggerFactory.getLogger(HoursRow.class);
+
 	private int hours;
 
 	public HoursRow(int hours, int rowSize) {
@@ -26,6 +31,7 @@ public class HoursRow extends ClockRow {
 				lamps.add(OFF.getSignal());
 		}
 
+		LOG.debug("Hour Row- Row size:{}, Lamps:{}", rowSize, lamps);
 		return join(EMPTY, lamps);
 	}
 }

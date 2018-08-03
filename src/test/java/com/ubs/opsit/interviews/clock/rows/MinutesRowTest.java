@@ -1,5 +1,7 @@
 package com.ubs.opsit.interviews.clock.rows;
 
+import static com.ubs.opsit.interviews.clock.utils.CommonConstants.MINUTES_FIRST_ROW_SIZE;
+import static com.ubs.opsit.interviews.clock.utils.CommonConstants.MINUTES_SECOND_ROW_SIZE;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -8,36 +10,36 @@ public class MinutesRowTest {
 
 	@Test
 	public void testGetLampsForFirstMinuteRowWithAllLampsOn() {
-		assertEquals("YYRYYRYYRYY", new MinutesRow(11, 11).getLamps());
+		assertEquals("YYRYYRYYRYY", new MinutesRow(11, MINUTES_FIRST_ROW_SIZE).getLamps());
 	}
 
 	@Test
 	public void testGetLampsForFirstMinuteRowWithAllLampsOff() {
-		assertEquals("OOOOOOOOOOO", new MinutesRow(0, 11).getLamps());
+		assertEquals("OOOOOOOOOOO", new MinutesRow(0, MINUTES_FIRST_ROW_SIZE).getLamps());
 	}
 
 	@Test
 	public void testGetLampsForFirstMinuteRow() {
-		assertEquals("YYRYYRYOOOO", new MinutesRow(7, 11).getLamps());
+		assertEquals("YYRYYRYOOOO", new MinutesRow(7, MINUTES_FIRST_ROW_SIZE).getLamps());
 	}
 
 	@Test
 	public void testGetLampsForSecondMinuteRow() {
-		assertEquals("YYOOO", new MinutesRow(2, 5).getLamps());
+		assertEquals("YYOO", new MinutesRow(2, MINUTES_SECOND_ROW_SIZE).getLamps());
 	}
 
 	@Test
 	public void testGetLampsForSecondMinuteRowWithAllLampsOff() {
-		assertEquals("OOOOO", new MinutesRow(0, 5).getLamps());
+		assertEquals("OOOO", new MinutesRow(0, MINUTES_SECOND_ROW_SIZE).getLamps());
 	}
 
 	@Test
 	public void testGetLampsForSecondMinuteRowWithAllLampsOn() {
-		assertEquals("YYYYY", new MinutesRow(5, 5).getLamps());
+		assertEquals("YYYY", new MinutesRow(4, MINUTES_SECOND_ROW_SIZE).getLamps());
 	}
 
 	@Test
 	public void testToString() {
-		assertEquals("YYYYY", new MinutesRow(5, 5).toString());
+		assertEquals("YYYY", new MinutesRow(4, MINUTES_SECOND_ROW_SIZE).toString());
 	}
 }
