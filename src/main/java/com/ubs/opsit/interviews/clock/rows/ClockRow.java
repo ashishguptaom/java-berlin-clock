@@ -8,11 +8,10 @@ public abstract class ClockRow {
 	}
 
 	public abstract String getLamps();
-	
+
 	@Override
 	public String toString() {
 		return getLamps();
 	}
-	
-	
+
 }

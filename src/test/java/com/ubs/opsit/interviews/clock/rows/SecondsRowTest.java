@@ -15,7 +15,7 @@ public class SecondsRowTest {
 	public void testGetLampsForOnSignal() {
 		assertEquals("O", new SecondsRow(1, 1).getLamps());
 	}
-	
+
 	@Test
 	public void testToString() {
 		assertEquals("O", new SecondsRow(1, 1).toString());

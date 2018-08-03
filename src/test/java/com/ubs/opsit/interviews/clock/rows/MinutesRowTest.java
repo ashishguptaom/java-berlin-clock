@@ -35,7 +35,7 @@ public class MinutesRowTest {
 	public void testGetLampsForSecondMinuteRowWithAllLampsOn() {
 		assertEquals("YYYYY", new MinutesRow(5, 5).getLamps());
 	}
-	
+
 	@Test
 	public void testToString() {
 		assertEquals("YYYYY", new MinutesRow(5, 5).toString());
