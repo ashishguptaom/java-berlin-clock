@@ -3,8 +3,6 @@ package com.ubs.opsit.interviews.clock;
 import static org.apache.commons.lang.StringUtils.countMatches;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.powermock.api.mockito.PowerMockito.verifyNew;
 import static org.powermock.api.mockito.PowerMockito.whenNew;
 
 import org.junit.Test;
@@ -17,7 +15,7 @@ import com.ubs.opsit.interviews.clock.rows.MinutesRow;
 import com.ubs.opsit.interviews.clock.rows.SecondsRow;
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({BerlinClockTest.class, SecondsRow.class})
+@PrepareForTest({ BerlinClockTest.class, SecondsRow.class })
 public class BerlinClockTest {
 
 	@Test
