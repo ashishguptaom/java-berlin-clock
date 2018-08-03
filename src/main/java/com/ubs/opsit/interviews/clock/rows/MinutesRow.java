@@ -26,8 +26,9 @@ public class MinutesRow extends ClockRow {
 					lamps.add(RED.getSignal());
 				else
 					lamps.add(YELLOW.getSignal());
-			} else
+			} else {
 				lamps.add(OFF.getSignal());
+			}
 		}
 
 		return join(EMPTY, lamps);

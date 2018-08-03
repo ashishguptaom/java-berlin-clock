@@ -18,11 +18,10 @@ public class TimeConverterImpl implements TimeConverter {
 			throw new InvalidTimeException("Invalid Input: Provide input in form of HH:MM:SS");
 
 		BerlinClock berlinClock = null;
-		Integer hour, minutes, seconds = null;
 		try {
-			hour = parseInt(timeElements[0]);
-			minutes = parseInt(timeElements[1]);
-			seconds = parseInt(timeElements[2]);
+			Integer hour = parseInt(timeElements[0]);
+			Integer minutes = parseInt(timeElements[1]);
+			Integer seconds = parseInt(timeElements[2]);
 
 			if (hour > 24 || hour < 0 || minutes > 59 || minutes < 0 || seconds > 59 || seconds < 0)
 				throw new InvalidTimeException("Invalid Input: Provide valid hour/minutes/seconds");
